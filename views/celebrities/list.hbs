@@ -1,0 +1,25 @@
+{{!-- <a class="btn btn-primary mb-3" href="/<celebrities/create>">New Book</a> --}}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Occupation</th>
+      <th>Catchphrase</th>
+     
+    </tr>
+  </thead>
+
+  <tbody>
+    {{#each celebrities as |celebrity| }}
+      <tr>
+        <td>
+          <a href="/celebrities/{{celebrity._id}}/edit">{{ celebrity.name }}</a>
+        </td>
+        <td>{{ celebrity.occupation }}</td>
+        <td>{{ celebrity.catchphrase }}</td>
+       
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

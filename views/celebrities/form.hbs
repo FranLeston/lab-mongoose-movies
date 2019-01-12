@@ -1,0 +1,19 @@
+<form action="/celebrities/create" method= "POST">
+<div >
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name="name" value="{{celebrity.name}}">
+  </div>
+
+  <div >
+    <label for="occupation">Occupation</label>
+    <input type="text" class="form-control" id="occupation" name="occupation" value="{{celebrity.occupation}}">
+  </div>
+
+  <div >
+    <label for="catchphrase">Catchphrase</label>
+    <input type="text" class="form-control" id="catchphrase" name="catchphrase" value="{{celebrity.catchphrase}}">
+  </div>
+
+<button type="submit">Submit</button>
+
+</form>

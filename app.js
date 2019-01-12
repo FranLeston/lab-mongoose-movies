@@ -6,11 +6,18 @@ const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
 
 const app = express();
+const celebritiesRoutes = require('./routes/celebrities.routes');
+const moviesRoutes = require('./routes/movies.routes');
+
+
 
 require('./config/db.config');
 
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use('/celebrities', celebritiesRoutes);
+// app.use('/movies', moviesRoutes);
+
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'hbs');
